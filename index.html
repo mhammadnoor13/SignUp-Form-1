@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign Up Form</title>
+</head>
+<body>
+    <div id="container">
+        <div id="left-container">
+            
+        </div>
+        <div id="right-container">
+            <div id="welcome-message">
+                <br>
+                <h1>Welcome To Our Website !</h1>
+                <p>This is my first forum I hope you like it. </p>
+                <p>Feel free to try whatever you want and don't forget to give me feedback about your experience.</p>
+            </div>
+            <div id="form-filling">
+                <form action="https://httpbin.org/post" method="post">
+                    <fieldset>
+                        <legend>
+                            Let's Start
+                        </legend>
+                        <div class="form-row">
+                            <div>
+                                <label for="first-name"> First Name </label>
+                                <input type="text" name ="first-name" placeholder="Enter your first name" 
+                                    required 
+                                    minlength="3" 
+                                    pattern="^[A-Za-z]+([ -][A-Za-z]+)*$"
+                                    title="Name must contain only letters, and can include spaces or hyphens."
+                                > 
+                            </div>
+                            <div>
+                                <label for="last-name"> Last Name </label>
+                                <input type="text" name ="last-name" placeholder="Enter your last name" 
+                                    required
+                                    minlength="3" 
+                                    pattern="^[A-Za-z]+([ -][A-Za-z]+)*$"
+
+                                    title="Name must contain only letters, and can include spaces or hyphens."
+                                >
+                            </div>
+
+                        </div>
+                        <div class="form-row">
+                            <div>
+                                <label for="email"> Email </label>
+                                <input type="email" name ="email" placeholder="Enter your email" 
+                                    required
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                                    title="Please enter a valid email address (e.g., user@example.com)"
+                                    >
+                            </div>
+
+                            <div>
+                                <label for="phone-number"> Phone Number </label>
+                                <input type="tel" name ="phone-number" placeholder="Enter your phone number" 
+                                    required
+                                    pattern="^\+?[0-9]{1,4}?[-.\s]?[0-9]{3}[-.\s]?[0-9]{3,4}[-.\s]?[0-9]{4}$"
+                                    title="Please enter a valid phone number (e.g., +123-456-789-0123 or 123-456-7890)"
+                                    >
+                            </div>
+                        </div>
+                                                
+                        <div class="form-row">
+                            <div>
+                                <label for="password"> Password </label>
+                                <input type="password" name ="password" placeholder="Enter your password" 
+                                    required
+                                    minlength="8" 
+                                    maxlength="16" 
+                                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" 
+                                    title="Password must be 8-16 characters, include uppercase and lowercase letters, a number, and a special character.">
+                            </div>
+                            <div>
+    
+                                <label for="confirm-password"> Confirm Password </label>
+                                <input type="password" name ="confirm-password" placeholder="Renter your password" 
+                                    required
+                                    title="Renter the password again"
+                                    >
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <button id="submit-btn" type="submit">Create Account</button>
+    
+                </form>
+                <p>Already have an account? <a href="#">Log in</a> </p>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="JS/main.js"></script>
+</body>
+</html>
